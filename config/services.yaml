@@ -63,19 +63,6 @@
           firstDayInWeek: monday
           view: monthly
           showTime: true
-          intergrations:
-            - type: ical
-              url: https://calendar.google.com/calendar/ical/tudor.roman22%40gmail.com/private-fa12aaf88fc340cae1b30b32c39bf3c3/basic.ics
-              name: Personal
-              color: zinc
-              params:
-                showName: true
-            - type: ical
-              url: https://calendar.google.com/calendar/ical/loheuovi4fom09rcjttte430rk%40group.calendar.google.com/public/basic.ics
-              name: Sala
-              color: teal
-              params:
-                showName: true
 
 - Streaming:
     - Netflix:
