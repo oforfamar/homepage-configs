@@ -1,0 +1,34 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+- resources:
+    label: System
+    cpu: true
+    memory: true
+    cputemp: true
+
+- resources:
+    label: Storage
+    disk: /
+
+- search:
+    provider: google
+    showSearchSuggestions: true
+    target: _blank
+
+- datetime:
+    text_size: xl
+    format:
+        dateStyle: full
+        timeStyle: short
+
+- openmeteo:
+    label: Iasi
+    latitude: 47.1667
+    longitude: 27.6
+    timezone: Europe/Bucharest
+    units: metric
+    cache: 5
+    format:
+        maximumFractionDigits: 1

@@ -1,0 +1,132 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Homelab:
+    - Proxmox:
+        icon: proxmox
+        href: "https://proxmox.local:8006/#v1:0:18:4:::::::"
+        ping: 192.168.0.105
+        widget:
+          type: proxmox
+          url: "https://proxmox.local:8006"
+          username: {{HOMEPAGE_VAR_PROXMOX_USERNAME}}
+          password: {{HOMEPAGE_VAR_PROXMOX_PASSWORD}}
+
+    - Plex:
+        icon: plex
+        href: http://plex.local:32400/web/index.html#!/
+        ping: 192.168.0.222
+        widget:
+          type: plex
+          fields: ["streams", "movies", "tv"]
+          url: http://plex.local:32400
+          key: {{HOMEPAGE_VAR_PLEX_TOKEN}}
+
+    - AdGuard Home:
+        icon: adguard-home
+        href: http://homeadguard.local
+        ping: 192.168.0.112
+        widget:
+          type: adguard
+          url: http://homeadguard.local
+          username: {{HOMEPAGE_VAR_ADGUARD_USERNAME}}
+          password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+
+    - Uptime Kuma:
+        icon: uptime-kuma
+        href: http://kuma.local:3001
+        siteMonitor: http://kuma.local:3001
+        widget:
+          type: uptimekuma
+          url: http://kuma.local:3001
+          slug: homelab
+
+    - qBittorrent:
+        icon: qbittorrent
+        href: http://plex.local:8080
+        siteMonitor: http://plex.local:8080
+        widget:
+          type: qbittorrent
+          url: http://plex.local:8080
+          username: {{HOMEPAGE_VAR_QBITTORRENT_USERNAME}}
+          password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
+
+    - HomeAssistant:
+        icon: home-assistant-alt
+        href: https://homeassistant.local:8123/lovelace/default_view
+
+- Misc:
+    - "":
+        widget:
+          type: calendar
+          firstDayInWeek: monday
+          view: monthly
+          showTime: true
+          intergrations:
+            - type: ical
+              url: https://calendar.google.com/calendar/ical/tudor.roman22%40gmail.com/private-fa12aaf88fc340cae1b30b32c39bf3c3/basic.ics
+              name: Personal
+              color: zinc
+              params:
+                showName: true
+            - type: ical
+              url: https://calendar.google.com/calendar/ical/loheuovi4fom09rcjttte430rk%40group.calendar.google.com/public/basic.ics
+              name: Sala
+              color: teal
+              params:
+                showName: true
+
+- Streaming:
+    - Netflix:
+        icon: netflix
+        href: https://www.netflix.com/browse
+
+    - Prime Video:
+        icon: prime-video
+        href: https://www.primevideo.com/
+
+    - Hbo Max:
+        icon: /icons/hbo_max_icon.png
+        href: https://play.hbomax.com/profile/select
+
+    - "Disney+":
+        icon: disney-plus-light
+        href: https://www.disneyplus.com/en-gb/home
+
+    - SkyShowTime:
+        icon: /icons/skyshowtime_icon.webp
+        href: https://www.skyshowtime.com/watch/home
+
+    - YouTube:
+        icon: youtube
+        href: https://www.youtube.com/
+
+- Plex:
+    - CPU:
+        icon: mdi-chip
+        widget:
+          type: glances
+          url: http://plex.local:61208
+          metric: cpu
+
+    - Memory:
+        icon: mdi-memory
+        widget:
+          type: glances
+          url: http://plex.local:61208
+          metric: memory
+
+    - Network:
+        icon: mdi-network
+        widget:
+          type: glances
+          url: http://plex.local:61208
+          metric: network:enp2s0
+
+    - nas:
+        icon: mdi-folder
+        widget:
+          type: glances
+          url: http://plex.local:61208
+          metric: fs:/home/tudor/nas

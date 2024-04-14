@@ -1,0 +1,27 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/bookmarks
+
+- Developer:
+    - github.com/oforfamar:
+        - icon: github-light
+          href: https://github.com/oforfamar
+
+    - ChatGPT:
+        - icon: chatgpt
+          href: https://chat.openai.com/
+
+    - SkillShare:
+        - icon: /icons/skillshare_icon.png
+          href: https://www.skillshare.com/en/home
+
+- Social:
+    - Reddit:
+        - icon: reddit.png
+          href: https://reddit.com/
+          description: The front page of the internet
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/

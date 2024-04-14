@@ -1,0 +1,35 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+background: /images/background.webp
+
+cardBlur: xl
+
+statusStyle: dot
+
+layout:
+    Homelab:
+        icon: mdi-home-circle
+        style: row
+        columns: 3
+        useEqualHeights: true
+
+    Misc:
+        icon: mdi-calendar-month
+        style: columns
+        columns: 1
+
+    Streaming:
+        icon: mdi-video-vintage
+        style: columns
+        columns: 3
+
+    Plex:
+        icon: mdi-desktop-tower
+        style: row
+        columns: 4
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
