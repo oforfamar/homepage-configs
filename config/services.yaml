@@ -54,7 +54,7 @@
 
     - HomeAssistant:
         icon: home-assistant-alt
-        href: https://homeassistant.local:8123/lovelace/default_view
+        href: http://homeassistant.local:8123/lovelace/default_view
 
 - Misc:
     - "":
