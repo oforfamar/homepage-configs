@@ -11,10 +11,6 @@
         - icon: chatgpt
           href: https://chat.openai.com/
 
-    - SkillShare:
-        - icon: /icons/skillshare_icon.png
-          href: https://www.skillshare.com/en/home
-
 - Social:
     - Reddit:
         - icon: reddit.png
@@ -23,5 +19,5 @@
 
 - Entertainment:
     - YouTube:
-        - abbr: YT
+        - icon: youtube
           href: https://youtube.com/
